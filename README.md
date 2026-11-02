@@ -1,6 +1,6 @@
 # 맛집 관리 REST API
 
-- **Render Deployment URL:** TODO: https://week09-webd.onrender.com
+- **Render Deployment URL:** https://week09-webd.onrender.com/api/restaurants
 - **GitHub Organization Repository:** https://github.com/2026-2-WebService/assign09-c01-22300133
 - **Personal GitHub Repository:** https://github.com/shkim2104/week09_webD
 
