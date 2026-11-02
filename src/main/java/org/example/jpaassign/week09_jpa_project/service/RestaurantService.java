@@ -3,6 +3,13 @@ package org.example.jpaassign.week09_jpa_project.service;
 import jakarta.validation.Valid;
 import org.example.jpaassign.week09_jpa_project.dto.RestaurantRequest;
 import org.springframework.stereotype.Service;
+import org.example.jpaassign.week09_jpa_project.dto.RestaurantResponse;
+import org.example.jpaassign.week09_jpa_project.entity.Restaurant;
+import org.example.jpaassign.week09_jpa_project.repository.RestaurantRepository;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.server.ResponseStatusException;
+
+import java.util.List;
 
 @Service
 public class RestaurantService {
