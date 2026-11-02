@@ -1,8 +1,5 @@
 package org.example.jpaassign.week09_jpa_project.controller;
 
-import com.webservice.sample.dto.BookRequest;
-import com.webservice.sample.dto.BookResponse;
-import com.webservice.sample.service.BookService;
 import jakarta.validation.Valid;
 import org.example.jpaassign.week09_jpa_project.dto.RestaurantRequest;
 import org.example.jpaassign.week09_jpa_project.dto.RestaurantResponse;
@@ -21,16 +18,16 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/books")
-public class BookController {
+@RequestMapping("/api/restaurants")
+public class RestaurantController {
     private final RestaurantService service;
 
-    public RestaurantController(Service service) { this.service = service; }
+    public RestaurantController(RestaurantService service) { this.service = service; }
 
     @PostMapping
     public ResponseEntity<RestaurantResponse> create(@Valid @RequestBody RestaurantRequest request) {
         RestaurantResponse created = service.create(request);
-        return ResponseEntity.created(URI.create("/api/books/" + created.id())).body(created);
+        return ResponseEntity.created(URI.create("/api/restaurants/" + created.id())).body(created);
     }
 
     @GetMapping
