@@ -4,7 +4,6 @@ import jakarta.validation.Valid;
 import org.example.jpaassign.week09_jpa_project.dto.RestaurantRequest;
 import org.example.jpaassign.week09_jpa_project.dto.RestaurantResponse;
 import org.example.jpaassign.week09_jpa_project.service.RestaurantService;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

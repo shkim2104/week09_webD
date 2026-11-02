@@ -1,5 +1,7 @@
 package org.example.jpaassign.week09_jpa_project.service;
 
+import jakarta.validation.Valid;
+import org.example.jpaassign.week09_jpa_project.dto.RestaurantRequest;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -23,7 +25,7 @@ public class RestaurantService {
         return RestaurantResponse.from(findEntity(id));
     }
 
-    public RestaurantResponse update(Long id, RestaurantRequest request) {
+    public RestaurantResponse update(Long id, @Valid RestaurantRequest request) {
         Restaurant restaurant = findEntity(id);
         restaurant.update(request);
         // Week 09: explicitly save (Week 10 changes this to Dirty Checking).
